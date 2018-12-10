@@ -78,6 +78,16 @@ RUN apt-get update && apt-get install -yq --fix-missing \
     php-geos \
     php-xdebug php-imagick imagemagick nginx
 
+RUN apt-get update && \
+  apt-get install -y \
+    libgtk2.0-0 \
+    libnotify-dev \
+    libgconf-2-4 \
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    xvfb
+
 RUN update-alternatives --set php /usr/bin/php7.2
 RUN update-alternatives --set phar /usr/bin/phar7.2
 RUN update-alternatives --set phar.phar /usr/bin/phar.phar7.2
