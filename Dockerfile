@@ -2,11 +2,6 @@
 FROM ubuntu:bionic
 MAINTAINER Chilio 
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBCONF_NONINTERACTIVE_SEEN true
-
-ENV DISPLAY=:1.5
-ENV SCREEN_RESOLUTION 1920x720x24
 ENV CHROMEDRIVER_PORT 9515
 
 ENV TMPDIR=/tmp
@@ -167,6 +162,7 @@ RUN mv phpunit.phar /usr/local/bin/phpunit
 RUN npm install -g node-gyp
 RUN npm install --unsafe-perm -g node-sass
 RUN npm install -g gulp
+RUN npm install -g cypress
 
 RUN apt-get update && apt-get install -yq --fix-missing supervisor
 
