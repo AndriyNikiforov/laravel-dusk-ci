@@ -81,7 +81,12 @@ RUN apt-get update && \
     libnss3 \
     libxss1 \
     libasound2 \
-    xvfb
+    xvfb \
+    libxtst6 \
+    libgtkextra-dev \
+    libicu-dev \
+    libgconf2-dev \
+    libxtst-dev 
 
 RUN update-alternatives --set php /usr/bin/php7.2
 RUN update-alternatives --set phar /usr/bin/phar7.2
